@@ -9,7 +9,9 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "dev": "docker compose up --build --timestamps --watch"
+    "run": "docker compose up --build --timestamps -d",
+    "dev": "docker compose up --build --timestamps --watch",
+    "drop": "docker compose down -v --remove-orphans --rmi all"
   },
   "keywords": [
     "kibana",
